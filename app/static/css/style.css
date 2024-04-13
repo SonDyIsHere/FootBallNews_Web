@@ -1,0 +1,325 @@
+h1{
+  font-family: 'Comic Sans MS', cursive;
+  font-weight: bold;
+  font-size: 3em;
+}
+.fakeimg {
+  height: 200px;
+  background: #aaa;
+}
+.image-container {
+      width: 100%;
+      height: 350px;
+      border: 1px solid #ccc;
+      overflow: hidden; /* để ảnh không tràn ra khỏi div nếu nó lớn hơn */
+ }
+
+  /* Định dạng cho ảnh */
+  .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+  }
+.text-overlay {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+<!-- Thẻ navbar      -->
+ body{
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+ nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.logo {
+    float: left;
+    font-size: 1.5em;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-right {
+        float: right;
+    }
+
+@media screen and (max-width: 600px) {
+    nav a, .logo {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .navbar-right {
+        float: none;
+    }
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: none;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.product-card {
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 10px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-image {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+}
+
+.product-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    color: #e44d26;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.product-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #e44d26;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-btn:hover {
+    background-color: #333;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.news-container {
+    display: flex;
+    max-width: 1000px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.main-news {
+    flex: 2;
+    padding: 20px;
+}
+
+.side-news {
+    flex: 2;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+}
+
+.news-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news-content {
+    color: #555;
+    line-height: 1.6;
+}
+
+.news-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.news-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list-item {
+    margin-bottom: 15px;
+}
+
+.news-list-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.hello{
+    display:flex;
+    justify-content: center;
+    padding: 40px 0px 0px 0px;
+}
+.news-image-child{
+    width: 30%;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.news-list li {
+    display: flex;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.search-container {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.search-input {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.search-button {
+    width: 25%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e44d26;
+    color: #fff;
+    cursor: pointer;
+}
+h2 {
+    text-align: center;
+    font-size: 2em; /* Kích thước mặc định */
+}
+.notification {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            position: fixed;
+            top: 50%; /* Thay đổi từ top: 0 thành bottom: 0 */
+            left: 25%;
+            width: 50%;
+            z-index: 999;
+            display: none;
+        }
+@media screen and (max-width: 1100px) {
+    h2 {
+        font-size: 1.5em;
+    }
+    h1{
+      font-family: 'Comic Sans MS', cursive;
+      font-weight: bold;
+      font-size: 1em;
+    }
+    h5{
+        font-size: 0.5em;
+    }
+}

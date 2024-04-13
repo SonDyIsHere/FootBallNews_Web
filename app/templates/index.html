@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap 5 Website Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="/static/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="image-container">
+    <!-- Thẻ img để chứa đường dẫn của ảnh -->
+    <img src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/09/hinh-nen-bong-da.jpg" alt="Mô tả ảnh">
+     <div class="text-overlay">
+            <h1>BÓNG ĐÁ 24/7</h1>
+         <h5>Trang tin tức hàng hàng đầu Việt Nam</h5>
+     </div>
+</div>
+
+<nav>
+        <a href="#" class="logo">Logo</a>
+        <div>
+            {% for c in categories:%}
+            <a href="#">{{c.name}}</a>
+            {% endfor %}
+        </div>
+        <div class ="navbar-right">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="/login">Sign-in</a>
+            <a href="/logout">Signout</a>
+            <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button" onclick="searchNews()">Search</button>
+            </div>
+        </div>
+</nav>
+{% if current_user.is_authenticated %}
+        <h2>Hello, {{current_user}}!</h2>
+{% else %}
+        <h2>Welcome, Guest!</h2>
+{% endif %}
+<div class="hello">
+ <div class="news-container">
+        <div class="main-news div_">
+            <img class="news-image" src="https://media.bongda.com.vn/resize/343x220/files/tuan.le/2023/11/25/107-2119.jpg" alt="Main News Image">
+            <a class="news-title" href="#" style="text-decoration: none; color: #333;">Borussia Dortmund quan tâm đến tiền đạo 15 tuổi của AC Milan</a>
+            <div class="news-content">
+                <p>Theo BVBbuzz, Borussia Dortmund đang quan tâm đến tiền đạo 15 tuổi Francesco Camarda thuộc biên chế của AC Milan.</p>
+            </div>
+        </div>
+
+        <div class="side-news">
+            <h3 style="padding-bottom: 20px; font-weight: bold">TIN KHÁC</h3>
+            <ul class="news-list">
+                {% for i in range(3):%}
+                <li class="news-list-item">
+                    <img class="news-image-child" src="{{news[i].img}}" alt="Side News Image 1">
+                    <a href="#">{{news[i].title}}</a>
+                </li>
+                {% endfor %}
+                <!-- Add more news items as needed -->
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+ <div class="product-container">
+      {% for c in news:%}
+        <div class="product-card">
+            <div class="product-image">
+                <img src="{{c.img}}" alt="###">
+            </div>
+            <div class="product-info">
+                <div class="product-title">{{c.title}}</div>
+                <div class="product-description">{{c.content}}</div>
+                <a href="#" class="product-btn">Xem chi tiết</a>
+            </div>
+        </div>
+     {% endfor %}
+ </div>
+
+<div>
+    <div class="content">
+        <!-- Your page content goes here -->
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Bóng đá 24/7 | Designed by <a href="https://www.example.com" target="_blank">Nhom</a></p>
+    </div>
+
+</div>
+</body>
+</html>
